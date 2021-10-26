@@ -1,0 +1,14 @@
+.header {
+    position: absolute;
+    top: 30px;
+    &__items {
+        display: flex;
+    }
+    &__item {
+        display: flex;
+        padding-left: 40px;
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+}
