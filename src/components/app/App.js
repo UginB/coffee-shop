@@ -1,14 +1,19 @@
-import Header from '../header/header';
+import CoffeeLinks from '../coffee-links/coffee-links';
 import MainSection from '../main-section/main-section';
+import AboutSection from '../about/about';
+import BestSection from '../best/best';
+import FooterSection from '../footer/footer';
 
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <CoffeeLinks/>
       <MainSection/>
-      
+      <AboutSection />
+      <BestSection />
+      <FooterSection />
     </div>
   );
 }
