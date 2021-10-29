@@ -1,4 +1,7 @@
 .footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     padding: 30px 0 21px;
     min-height: 150px;
     background: #FFFFFF;

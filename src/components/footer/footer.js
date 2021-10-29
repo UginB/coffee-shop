@@ -4,10 +4,10 @@ import BeansLogo from '../beans_logo_black.png';
 
 import './footer.scss'
 
-function FooterSection() {
+const FooterSection = () => {
     return (
         <footer className="footer">
-            <CoffeeLinks /> сделай через пропс черный цвет текста и картинки
+            <CoffeeLinks color='black'/>
             <img src={BeansLogo} alt="Beans logo" className="logo"/>
         </footer>
     );

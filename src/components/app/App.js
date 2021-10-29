@@ -6,10 +6,10 @@ import FooterSection from '../footer/footer';
 
 import './App.scss';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <CoffeeLinks/>
+      <CoffeeLinks color='white'/>
       <MainSection/>
       <AboutSection />
       <BestSection />
