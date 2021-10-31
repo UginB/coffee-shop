@@ -5,7 +5,7 @@ import './about.scss'
 function AboutSection() {
     return (
         <section className="about">
-            <h2 className="title">About Us</h2>
+            <h2 className="title title_mb10">About Us</h2>
             <img src={BeansLogo} alt="Beans logo" className="logo"/>
             <p className="about__subheader">
                 Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
