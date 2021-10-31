@@ -1,6 +1,6 @@
-import './best.scss'
+import './coffee-item.scss'
 
-function BestSection({data}) {
+function CoffeeItem() {
     
     return (
         <section className="best">
@@ -10,4 +10,4 @@ function BestSection({data}) {
     );
 }
   
-export default BestSection;
+export default CoffeeItem;

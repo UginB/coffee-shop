@@ -1,3 +1,6 @@
+import { Component } from 'react';
+import nextId from "react-id-generator";
+
 import CoffeeLinks from '../coffee-links/coffee-links';
 import MainSection from '../main-section/main-section';
 import AboutSection from '../about/about';
@@ -6,16 +9,33 @@ import FooterSection from '../footer/footer';
 
 import './App.scss';
 
-const App = () => {
-  return (
-    <div className="App">
-      <CoffeeLinks color='white'/>
-      <MainSection/>
-      <AboutSection />
-      <BestSection />
-      <FooterSection />
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [
+        {img: '../src/img/goods/AROMISTICO_Coffee1kg.png', name: 'AROMISTICO Coffee 1 kg', price: '10.73$', id: nextId()},
+        {img: '../../img/goods/PrestoCoffeeBeans1kg.png', name: 'Presto Coffee Beans 1 kg', price: '10.73$', id: nextId()},
+        {img: '../../img/goods/SolimoCoffeeBeans2kg.png', name: 'Solimo Coffee Beans 2 kg', price: '10.73$', id: nextId()}
+      ]
+    }
+  }
+  
+  render() {
+    const {data} = this.state;
+    console.log(data);
+    return (
+      <div className="App">
+        <CoffeeLinks 
+          color='white' 
+          section='header'/>
+        <MainSection/>
+        <AboutSection />
+        <BestSection data={data}/>
+        <FooterSection />
+      </div>
+    );
+  }
 }
 
 export default App;

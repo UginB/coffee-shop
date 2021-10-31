@@ -2,15 +2,27 @@
     position: absolute;
     top: 30px;
     left: 49px;
+    height: 40px;
+    &_footer {
+        position: relative;
+        top: 0;
+        left: 0 ;
+        display: block;
+        margin: 0 auto 30px auto;
+    }
     &__items {
         display: flex;
+        color: #FFFFFF;
+        &_black {
+            color: #000000;
+        }
     }
     &__item {
         cursor: pointer;
         position: relative;
         display: flex;
         font-size: 12px;
-        color: #FFFFFF;
+        
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         padding-left: 40px;
         &:first-child {

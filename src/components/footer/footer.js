@@ -7,7 +7,9 @@ import './footer.scss'
 const FooterSection = () => {
     return (
         <footer className="footer">
-            <CoffeeLinks color='black'/>
+            <CoffeeLinks 
+                color='black'
+                section='footer'/>
             <img src={BeansLogo} alt="Beans logo" className="logo"/>
         </footer>
     );
