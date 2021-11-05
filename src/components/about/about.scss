@@ -1,7 +1,12 @@
 .about {
+    display: flex;
+    justify-content: center;
     padding: 80px 0 101px 0;
     height: 520px;
     background: #FFFFFF;
+    &__img {
+        margin-right: 50px;
+    }
     &__subheader {
         margin: 40px auto 0 auto;
         width: 589px;
@@ -10,5 +15,21 @@
         line-height: 20px;
         text-align: center;
         color: #000000;
+        &_it {
+            text-align: left;
+            width: 418px;
+            span {
+                font-size: 24px; 
+            }
+        }
+        &_ourBeans-goods {
+            max-width: 346px;
+        }
+        div {
+            padding-top: 16px;
+            &:first-child {
+                padding-top: 0;
+            }
+        }
     }
 }

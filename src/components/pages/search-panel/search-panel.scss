@@ -1,0 +1,37 @@
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    label {
+        padding-right: 19px;
+    }
+    input {
+        font-size: 12px;
+        text-align: center;
+        font-family: 'Merienda',sans-serif;
+    }
+    &__filter {
+        display: flex;
+        padding-left: 83px;
+        &__text {
+            padding-right: 35px;
+        }
+    }
+    .btn {
+        min-width: 75px;
+        height: 30px;
+        background: #FFFFFF;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25); 
+        font-size: 12px;
+        text-align: center;
+        color: #000000;
+        border-color: #FFFFFF;
+        &:first-of-type {
+            border-radius: 4px 0px 0px 4px;
+        }
+        &:last-of-type {
+            border-radius: 0 4px 4px 0;
+        }
+    }
+}
