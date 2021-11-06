@@ -8,7 +8,6 @@ import BestSection from '../best/best';
 import FooterSection from '../footer/footer';
 import OurCoffee from '../pages/our-coffee/our-coffee';
 import ForYourPleasure from '../pages/for-your-pleasure/for-your-pleasure';
-import SearchPanel from '../pages/search-panel/search-panel';
 
 import './App.scss';
 
@@ -17,18 +16,13 @@ class App extends Component {
     super(props);
     this.state = {
       data: [
-        {img: '/img/goods/AROMISTICO_Coffee1kg.png', name: 'AROMISTICO Coffee 1 kg', price: '10.73$', id: nextId()},
-        {img: '/img/goods/PrestoCoffeeBeans1kg.png', name: 'Presto Coffee Beans 1 kg', price: '15.99$', id: nextId()},
-        {img: '/img/goods/SolimoCoffeeBeans2kg.png', name: 'Solimo Coffee Beans 2 kg', price: '6.99$', id: nextId()}
-      ],
-      filter: 'all'
+        {img: '/img/goods/AROMISTICO_Coffee1kg.png', country: 'Kenya', name: 'AROMISTICO Coffee 1 kg', price: '10.73$', id: nextId()},
+        {img: '/img/goods/PrestoCoffeeBeans1kg.png', country: 'Columbia', name: 'Presto Coffee Beans 1 kg', price: '15.99$', id: nextId()},
+        {img: '/img/goods/SolimoCoffeeBeans2kg.png', country: 'Brazil', name: 'Solimo Coffee Beans 2 kg', price: '6.99$', id: nextId()}
+      ]
     }
   }
 
-  onFilter = (filter) => {
-    this.setState({filter});
-  }
-  
   render() {
     const {data} = this.state;
 
@@ -38,19 +32,12 @@ class App extends Component {
           color='white' 
           section='header'/>
         <MainSection/>
-        <OurCoffee />
-        <SearchPanel />
-        <ForYourPleasure />
         <AboutSection 
           topic='Us'/>
-        <AboutSection 
-          topic='our beans'/>
-        <AboutSection 
-          topic='it'/>
-        <AboutSection 
-          topic='our goods'/>
         <BestSection data={data}/>
         <FooterSection />
+        <OurCoffee data={data}/>
+        <ForYourPleasure data={data}/>
       </div>
     );
   }
