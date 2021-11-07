@@ -73,9 +73,10 @@ const AboutSection = (props) => {
                 return (
                     <img src={process.env.PUBLIC_URL + '/img/aboutIt.jpg'} className="about__img" alt="it" />
                 );
-            default: console.log('us');
+            default: ;
         }
     }
+
     const imgAbout = addImg();
     const textAbout = addText();
     return (

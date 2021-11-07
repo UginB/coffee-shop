@@ -7,9 +7,15 @@
         padding-right: 19px;
     }
     input {
+        width: 180px;
+        height: 30px;
         font-size: 12px;
         text-align: center;
         font-family: 'Merienda',sans-serif;
+        background: #FFFFFF;
+        border-color: rgba(0, 0, 0, 0.001);
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
     }
     &__filter {
         display: flex;

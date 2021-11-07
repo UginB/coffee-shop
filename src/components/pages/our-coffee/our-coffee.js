@@ -3,7 +3,6 @@ import { Component } from 'react';
 import AboutSection from '../../about/about';
 import SearchPanel from '../search-panel/search-panel';
 import CoffeeItems from '../../coffee-items/coffee-items';
-import FooterSection from '../../footer/footer';
 
 import './our-coffee.scss'
 
@@ -62,10 +61,11 @@ class OurCoffee extends Component {
                     onFilter={this.onFilter} 
                     onUpdateSearch={this.onUpdateSearch}
                     filter={filter}/>
-                <CoffeeItems data={data}/>
+                <CoffeeItems 
+                    data={data}
+                    best={false}/>
                 <AboutSection 
                     topic='it'/>
-                <FooterSection />
             </>
         );
     }

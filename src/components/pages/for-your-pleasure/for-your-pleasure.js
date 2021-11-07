@@ -1,6 +1,5 @@
 import AboutSection from '../../about/about';
 import CoffeeItems from '../../coffee-items/coffee-items';
-import FooterSection from '../../footer/footer';
 
 import './for-your-pleasure.scss'
 
@@ -13,8 +12,9 @@ function ForYourPleasure(props) {
             </header>
             <AboutSection 
             topic='our goods'/>
-            <CoffeeItems data={data}/>
-            <FooterSection />
+            <CoffeeItems 
+                data={data}
+                best={false}/>
         </>
     );
 }

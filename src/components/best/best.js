@@ -7,7 +7,10 @@ function BestSection({data}) {
     return (
         <section className="best">
             <h2 className="title">Our best</h2>
-            <CoffeeItems data={data}/>
+            <CoffeeItems 
+                data={data}
+                best={true}
+                count={3}/>
         </section>
     );
 }
