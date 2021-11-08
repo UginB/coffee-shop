@@ -1,10 +1,9 @@
 import { Component } from 'react';
 
+import Header from '../../header/header';
 import AboutSection from '../../about/about';
 import SearchPanel from '../search-panel/search-panel';
 import CoffeeItems from '../../coffee-items/coffee-items';
-
-import './our-coffee.scss'
 
 class OurCoffee extends Component {
     constructor(props) {
@@ -52,9 +51,8 @@ class OurCoffee extends Component {
 
         return (
             <>
-                <header className="ourCoffee">
-                    <h1 className="title title_main">Our Coffee</h1>
-                </header>
+                <Header 
+                    name='Our Coffee'/>
                 <AboutSection 
                     topic='our beans'/>
                 <SearchPanel 
@@ -62,7 +60,7 @@ class OurCoffee extends Component {
                     onUpdateSearch={this.onUpdateSearch}
                     filter={filter}/>
                 <CoffeeItems 
-                    data={data}
+                    data={visibleData}
                     best={false}/>
                 <AboutSection 
                     topic='it'/>

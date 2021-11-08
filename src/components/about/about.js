@@ -1,9 +1,9 @@
-import BeansLogo from '../beans_logo_black.png';
+import BeansDivider from '../beans-divider/beans-divider';
 
 import './about.scss'
 
 const AboutSection = (props) => {
-    const {topic, img} = props;
+    const {topic} = props;
     
     const addText = () => {
         switch(topic)  {
@@ -84,7 +84,7 @@ const AboutSection = (props) => {
             {imgAbout}
             <div className="about__text">
                 <h2 className="title title_mb10">About {topic}</h2>
-                <img src={BeansLogo} alt="Beans logo" className="logo"/>
+                <BeansDivider color='black'/>
                 {textAbout}
             </div>
         </section>

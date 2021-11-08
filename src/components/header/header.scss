@@ -1,0 +1,34 @@
+.header {
+    padding: 181px 0 201px 0;
+    height: 640px;
+    background: url('./main_bg.jpg') center center/cover no-repeat;
+    &__subheader {
+        text-align: center;
+        font-size: 24px;
+        line-height: 45px;
+        color: #FFFFFF;
+        margin: 25px auto 18px auto;
+    }
+    &__btn {
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        width: 120px;
+        height: 30px;
+        font-size: 14px;
+        color: #FFFFFF;
+        background: rgba(255, 255, 255, 0.01);
+        border: 1px solid #FFFFFF;
+        border-radius: 3px;
+    }
+    &_secondary {
+        height: 260px;
+        padding: 130px 0 0 0;
+    }
+    &_for-your-pleasure {
+        background: url('./for-your-pleasure_bg.jpg') center center/cover no-repeat;
+    }
+    &_our-coffee {
+        background: url('./header_secondary.jpg') center center/cover no-repeat;
+    }
+}

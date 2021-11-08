@@ -1,6 +1,6 @@
 import CoffeeLinks from '../coffee-links/coffee-links';
 
-import BeansLogo from '../beans_logo_black.png';
+import BeansDivider from '../beans-divider/beans-divider';
 
 import './footer.scss'
 
@@ -10,7 +10,7 @@ const FooterSection = () => {
             <CoffeeLinks 
                 color='black'
                 section='footer'/>
-            <img src={BeansLogo} alt="Beans logo" className="logo"/>
+            <BeansDivider color='black'/>
         </footer>
     );
 }

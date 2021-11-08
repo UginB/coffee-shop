@@ -17,21 +17,32 @@ class App extends Component {
         {img: '/img/goods/AROMISTICO_Coffee1kg.png', country: 'Kenya', name: 'AROMISTICO Coffee 1 kg', price: '10.73$', id: nextId()},
         {img: '/img/goods/PrestoCoffeeBeans1kg.png', country: 'Columbia', name: 'Presto Coffee Beans 1 kg', price: '15.99$', id: nextId()},
         {img: '/img/goods/SolimoCoffeeBeans2kg.png', country: 'Brazil', name: 'Solimo Coffee Beans 2 kg', price: '6.99$', id: nextId()},
-      ]
+      ],
+      visibleSections: {
+        main: true,
+        ourCoffee: false,
+        forYourPleasure: false
+      }
     }
   }
 
-  render() {
-    const {data} = this.state;
+  onVisibleSection = (visibleSections) => {
+    this.setState({visibleSections});
+  }
 
+  render() {
+    const {data, visibleSections} = this.state;
+    
+    
     return (
       <div className="App">
         <CoffeeLinks 
           color='white' 
-          section='header'/>
-        <MainSection data={data}/>
-        <OurCoffee data={data}/>
-        <ForYourPleasure data={data}/>
+          section='header'
+          onVisibleSection={this.onVisibleSection}/>
+        <MainSection data={data} visible={true}/>
+        <OurCoffee data={data} visible={false}/>
+        <ForYourPleasure data={data} visible={false}/>
         <FooterSection />
       </div>
     );
