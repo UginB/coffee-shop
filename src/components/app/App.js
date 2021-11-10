@@ -18,21 +18,36 @@ class App extends Component {
         {img: '/img/goods/PrestoCoffeeBeans1kg.png', country: 'Columbia', name: 'Presto Coffee Beans 1 kg', price: '15.99$', id: nextId()},
         {img: '/img/goods/SolimoCoffeeBeans2kg.png', country: 'Brazil', name: 'Solimo Coffee Beans 2 kg', price: '6.99$', id: nextId()},
       ],
-      visibleSections: {
-        main: true,
-        ourCoffee: false,
-        forYourPleasure: false
-      }
+        visibleSection: 'main'
     }
   }
 
-  onVisibleSection = (visibleSections) => {
-    this.setState({visibleSections});
+  onVisibleSection = (visibleSection) => {
+    this.setState({visibleSection});
   }
 
   render() {
-    const {data, visibleSections} = this.state;
-    
+    const {data, visibleSection} = this.state;
+    let mainPageVis, ourCoffeePageVis, forYourPleasurePageVis;
+
+    switch(visibleSection) {
+      case 'main':
+        mainPageVis = true;
+        ourCoffeePageVis = false;
+        forYourPleasurePageVis = false;
+        break;
+      case 'OurCoffee':
+        mainPageVis = false;
+        ourCoffeePageVis = true;
+        forYourPleasurePageVis = false;
+        break;
+      case 'ForYourPleasure':
+        mainPageVis = false;
+        ourCoffeePageVis = false;
+        forYourPleasurePageVis = true;
+        break; 
+      default: ;
+    }
     
     return (
       <div className="App">
@@ -40,10 +55,17 @@ class App extends Component {
           color='white' 
           section='header'
           onVisibleSection={this.onVisibleSection}/>
-        <MainSection data={data} visible={true}/>
-        <OurCoffee data={data} visible={false}/>
-        <ForYourPleasure data={data} visible={false}/>
-        <FooterSection />
+        <MainSection 
+          data={data} 
+          visible={mainPageVis}/>
+        <OurCoffee 
+          data={data} 
+          visible={ourCoffeePageVis}/>
+        <ForYourPleasure 
+          data={data} 
+          visible={forYourPleasurePageVis}/>
+        <FooterSection 
+          onVisibleSection={this.onVisibleSection}/>
       </div>
     );
   }

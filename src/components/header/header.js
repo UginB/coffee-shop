@@ -14,7 +14,7 @@ const Header = (props) => {
         headerClasses += " header_secondary"
         subheaderClasses += " hide";
         buttonClasses += " hide";
-        colorDivider = 'black'
+        colorDivider = 'none'
         if (name === 'For your pleasure') {
             headerClasses += ' header_for-your-pleasure'
         } else if (name === 'Our Coffee') {

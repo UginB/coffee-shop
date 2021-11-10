@@ -28,6 +28,8 @@ class OurCoffee extends Component {
             return items
         }
     }
+
+
     
     searchEmp = (items, term) => {
         if (term.length === 0) {
@@ -49,8 +51,13 @@ class OurCoffee extends Component {
 
         const visibleData = this.filterEmp(this.searchEmp(data, term), filter);
 
+        let clazz = '';
+        if(!this.props.visible) {
+            clazz +=  'hide';
+        }
+
         return (
-            <>
+            <div className={clazz}>
                 <Header 
                     name='Our Coffee'/>
                 <AboutSection 
@@ -64,7 +71,7 @@ class OurCoffee extends Component {
                     best={false}/>
                 <AboutSection 
                     topic='it'/>
-            </>
+            </div>
         );
     }
 }
