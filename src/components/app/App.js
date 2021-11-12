@@ -17,6 +17,9 @@ class App extends Component {
         {img: '/img/goods/AROMISTICO_Coffee1kg.png', country: 'Kenya', name: 'AROMISTICO Coffee 1 kg', price: '10.73$', id: nextId()},
         {img: '/img/goods/PrestoCoffeeBeans1kg.png', country: 'Columbia', name: 'Presto Coffee Beans 1 kg', price: '15.99$', id: nextId()},
         {img: '/img/goods/SolimoCoffeeBeans2kg.png', country: 'Brazil', name: 'Solimo Coffee Beans 2 kg', price: '6.99$', id: nextId()},
+        {img: '/img/goods/AROMISTICO_Coffee1kg.png', country: 'Kenya', name: 'AROMISTICO Coffee 1 kg', price: '10.73$', id: nextId()},
+        {img: '/img/goods/PrestoCoffeeBeans1kg.png', country: 'Columbia', name: 'Presto Coffee Beans 1 kg', price: '15.99$', id: nextId()},
+        {img: '/img/goods/SolimoCoffeeBeans2kg.png', country: 'Brazil', name: 'Solimo Coffee Beans 2 kg', price: '6.99$', id: nextId()}
       ],
         visibleSection: 'main'
     }

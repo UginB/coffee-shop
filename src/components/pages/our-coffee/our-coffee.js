@@ -10,7 +10,7 @@ class OurCoffee extends Component {
         super(props);
         this.state = {
           filter: 'all',
-          term: '',
+          term: ''
         }
     }
 
@@ -19,17 +19,12 @@ class OurCoffee extends Component {
     }
     
     filterEmp = (items, filter) => {
-        switch (filter) {
-          case 'moreThan1000': 
-            return items.filter(item => item.salary > 1000) 
-          case 'increase':
-            return items.filter(item => item.increase)
-          default:
-            return items
+        if (filter !== 'all') {
+            return items.filter(item => item.country === filter)
+        } else {
+            return items 
         }
     }
-
-
     
     searchEmp = (items, term) => {
         if (term.length === 0) {
