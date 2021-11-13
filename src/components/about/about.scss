@@ -6,6 +6,7 @@
     background: #FFFFFF;
     &__img {
         margin-right: 50px;
+        filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25));
     }
     &__subheader {
         margin: 40px auto 0 auto;
